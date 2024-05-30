@@ -1,0 +1,10 @@
+Create the Folders Frontend and Backend 
+
+Frontend : 
+      create vite@latest . donot have to add name 
+      rfce : shortcut for react js component 
+
+      create a navbar 
+      Daisy UI :  this his tailwind library it has lot of components example : navbar 
+
+      freepik.com :  for images 
