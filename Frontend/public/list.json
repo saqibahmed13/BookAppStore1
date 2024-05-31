@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name" : "Story Book",
+        "title" : "lorem, hhddsksdknskv",
+        "price" : 0,
+        "category" : "Free",
+        "image":"https://img.freepik.com/free-photo/wooden-table-with-three-books-top-each-other-daytime_181624-10034.jpg?t=st=1717164204~exp=1717167804~hmac=dd1301560d3bf8fc38eeb19a7335680a8ffffdffcf1cc01f8080930fa7836f3c&w=740"
+    },
+    {
+        "id": 2,
+        "name" : "Story Book",
+        "title" : "lorem, hhddsksdknskv",
+        "price" : 0,
+        "category" : "Free",
+        "image":"https://img.freepik.com/free-photo/wooden-table-with-three-books-top-each-other-daytime_181624-10034.jpg?t=st=1717164204~exp=1717167804~hmac=dd1301560d3bf8fc38eeb19a7335680a8ffffdffcf1cc01f8080930fa7836f3c&w=740"
+    },
+    {
+        "id": 3,
+        "name" : "Story Book",
+        "title" : "lorem, hhddsksdknskv",
+        "price" : 0,
+        "category" : "Free",
+        "image":"https://img.freepik.com/free-photo/wooden-table-with-three-books-top-each-other-daytime_181624-10034.jpg?t=st=1717164204~exp=1717167804~hmac=dd1301560d3bf8fc38eeb19a7335680a8ffffdffcf1cc01f8080930fa7836f3c&w=740"
+    },
+    {
+        "id": 4,
+        "name" : "Story Book",
+        "title" : "lorem, hhddsksdknskv",
+        "price" : 0,
+        "category" : "Free",
+        "image":"https://img.freepik.com/free-photo/wooden-table-with-three-books-top-each-other-daytime_181624-10034.jpg?t=st=1717164204~exp=1717167804~hmac=dd1301560d3bf8fc38eeb19a7335680a8ffffdffcf1cc01f8080930fa7836f3c&w=740"
+    }
+]
