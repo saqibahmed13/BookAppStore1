@@ -8,3 +8,5 @@ Frontend :
       Daisy UI :  this his tailwind library it has lot of components example : navbar 
 
       freepik.com :  for images 
+
+      c :  this is used for cards in react js  
