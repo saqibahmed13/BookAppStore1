@@ -4,7 +4,7 @@ function Card({item}) {     // yahan wo map ka array aajata pura usme se hame jo
   return (
     <>
       <div className="mt-4 my-3 p-3">
-        <div className="card w-92 bg-base-100 shadow-xl">
+        <div className="card w-92 bg-base-100 shadow-xl hover:scale-105 duration-200">
           <figure>
             <img
               src={item.image}    // item aaga parent(Freebooks) div se usme se humna image hona

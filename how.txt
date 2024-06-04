@@ -9,4 +9,6 @@ Frontend :
 
       freepik.com :  for images 
 
-      c :  this is used for cards in react js  
+      react slick :  this is used for cards in react js  
+
+      react-router-dom : for routes (/courses , /home etc ) we have to install these 
