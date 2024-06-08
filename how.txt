@@ -12,3 +12,4 @@ Frontend :
       react slick :  this is used for cards in react js  
 
       react-router-dom : for routes (/courses , /home etc ) we have to install these 
+      react-hook-form : for condtions to throw error while logging in if in case if they dont provide the values 
