@@ -16,10 +16,7 @@ function Banner() {
               <span className="text-pink-500">new everyday!!!</span>
             </h1>
             <p className="text-xl">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
-              saepe ducimus libero rerum dolores illo, iusto numquam nulla
-              maiores, modi nam, hic laudantium ab natus sapiente facilis non ad
-              architecto.
+            Your gateway to an expansive universe of literature. Whether you're a seasoned bibliophile or a curious newcomer, our platform offers a curated collection of books across genres, from timeless classics to contemporary bestsellers.
             </p>
             <label className="input input-bordered flex items-center gap-2">
             <svg
@@ -36,9 +33,14 @@ function Banner() {
           </div>
           <button className="mt-3 btn btn-active btn-secondary">Secondary</button>
         </div>
-        <div className="w-full order-1 md:w-1/2">
-            <img src={book} className = "w-41 h-41 py-20" alt="" />
-        </div>
+        <div className="w-full order-1 md:w-1/2 flex justify-end items-center">
+    <img src={book} className="w-full md:w-11/12 lg:w-10/12 h-auto py-4" alt="Book" />
+</div>
+
+
+
+
+
       </div>
     </>
   );

@@ -1,13 +1,29 @@
-import React from 'react';
-import list from '../../public/list.json'
+import React, { useState } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import axios from 'axios'
 import Card from './Card';
+import {useEffect} from 'react';
 
 
 function Freebooks() {
-const filterData = list.filter((data)=>data.category==="Free");
+
+const [book, setBook] = useState([]);
+useEffect(()=>{
+  const getBook = async () =>{
+    try{
+      const res = await axios.get("http://localhost:4001/book");
+      const data = res.data.filter((data)=>data.category==="Free");
+      setBook(data);
+    }catch(error){
+      console.log(error)
+    }
+  }
+  getBook();
+},[]);
+
+
 var settings = {
   dots: true,
   infinite: false,
@@ -46,12 +62,12 @@ var settings = {
     <div className='max-w-screen-2xl container mx-auto md:px-20 px-4'>
     <div>
     <h1 className='font-semibold text-xl pb-2 '>Free Offered Courses</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis harum quasi omnis ipsam unde maiores doloremque, odio, debitis eveniet doloribus nostrum ullam eius voluptatum quae velit dolorum beatae eaque fugiat.</p>
+      <p>Discover, explore, and immerse yourself in a world of literature with BookAppStore, where every page opens a new adventure.</p>
     </div>
     <div>
     <Slider {...settings}>
-        {filterData.map((item)=>(
-          <Card item={item} key={item.id}/>  // card k ander jo item hai item = {usme yeh value daldalo}
+        {book.map((item)=>(
+          <Card item={item} key={item._id}/>  // card k ander jo item hai item = {usme yeh value daldalo}
         ))}
       </Slider>
         

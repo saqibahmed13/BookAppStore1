@@ -13,3 +13,28 @@ Frontend :
 
       react-router-dom : for routes (/courses , /home etc ) we have to install these 
       react-hook-form : for condtions to throw error while logging in if in case if they dont provide the values 
+
+Backend 
+
+npm init 
+npm i express
+npm i mongoose
+
+nodemon : it will restart the server automatically when we make any changes we dont have to restart the server 
+dotenvnpm : env is a file which is confidential where all the details which are confidential we have to write it there 
+Eg: port number , database etc if not this than that 
+npm i dotenv and write the code on top  
+const  dotenv = require('dotenv')
+dotenv.config();  
+
+// however we will not use like this in new updated version will  be importing instead of using require and will give type as module in package.json
+
+
+// npm i axios  : api 
+// npm i cors :  to run backend and front end on different ports 
+npm i bcryptjs : to decrypt the password in database other should not see 
+
+model and controller :  model me schema rehta and controller me uska function 
+npm i react-toast
+react toast : for notifications  
+

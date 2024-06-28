@@ -1,19 +1,47 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Login from "./Login";
-import { useForm} from "react-hook-form"
+import {useForm} from "react-hook-form"
+import axios from 'axios'
+import toast from 'react-hot-toast'
 
 
 function Signup() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || '/';
     const {
         register,
         handleSubmit,
         formState: { errors },
       } = useForm()
-      const onSubmit =  (data) => console.log(data)
+      const onSubmit = async (data) => {
+        const userInfo = {
+          fullname: data.fullname,
+          email:data.email,
+          password:data.password,
+        };
+
+        try {const {data} = await axios.post("http://localhost:4001/user/signup", userInfo)
+        console.log("signupWala", data);
+        if(data){
+          toast.success("Signup Successfully")
+          navigate(from, {replace:true})
+        }           
+        } catch (err) {
+          if(err.response){
+            console.log(err)
+            toast.error("Error:"+ err.response.data.message);
+          }
+        }
+        
+
+         
+      }
   return (
     // id has been used in navbar section of login button
     <div className="flex h-screen items-center justify-center">
+    <Login/>
       <div className="w-[600px]">
         <div className="modal-box">
           <form onSubmit={handleSubmit(onSubmit)} method="dialog">
@@ -34,10 +62,10 @@ function Signup() {
               type="text"
               placeholder="Enter your name"
               className="w-80 px-3 py-1 border rounded-md outline-none"
-              {...register("name", { required: true })}
+              {...register("fullname", { required: true })}
             />
             <br />
-            {errors.name && <span className="text-sm text-red-500" >This field is required</span>}
+            {errors.fullname && <span className="text-sm text-red-500" >This field is required</span>}
           </div>
 
           <div className="mt-4 space-y-2">
@@ -67,13 +95,13 @@ function Signup() {
           </div>
           {/* button */}
           <div className="flex justify-around mt-4">
-            <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
+            <button type="submit" className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
               Signup
             </button>
             <p>
               Have Account?{" "}
               <button
-                to={"/"}
+                
                 className="underline text-blue-500 cursor-pointer"
                 onClick={() =>
                   document.getElementById("my_modal_3").showModal()
@@ -81,7 +109,7 @@ function Signup() {
               >
                 Login
               </button>{" "}
-              <Login />
+              
             </p>
           </div>
           </form>

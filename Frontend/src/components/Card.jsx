@@ -17,10 +17,11 @@ function Card({item}) {     // yahan wo map ka array aajata pura usme se hame jo
               <div className="badge badge-secondary">{item.category}</div>
             </h2>
             <p>{item.title}</p>
-            <div className="card-actions justify-end">
-              <div className="badge badge-outline">${item.price}</div>
-              <div className="cursor-pointer px-2 py-1 rounded-full border-[2px] hover:bg-pink-500 hover:text-white duration-200">Buy Now</div>
-            </div>
+            <div className="card-actions justify-between items-center">
+  <div className="badge badge-outline">${item.price}</div>
+  <div className="cursor-pointer px-2 py-1 rounded-full border-[2px] hover:bg-pink-500 hover:text-white duration-200">Buy Now</div>
+</div>
+
           </div>
         </div>
       </div>
